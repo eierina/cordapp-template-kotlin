@@ -4,6 +4,7 @@ apply plugin: 'net.corda.plugins.quasar-utils'
 cordapp {
     targetPlatformVersion corda_platform_version
     minimumPlatformVersion corda_platform_version
+
     workflow {
         name "Template Flows"
         vendor "Corda Open Source"
@@ -27,7 +28,7 @@ sourceSets {
         kotlin {
             compileClasspath += main.output + test.output
             runtimeClasspath += main.output + test.output
-            srcDir file('src/integrationTest/kotlin')
+            srcDirs += file('src/integrationTest/kotlin')
         }
     }
 }
